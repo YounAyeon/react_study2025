@@ -5,6 +5,7 @@ const Count = () => {
     let count = 0;
 
     //state 선언
+    // 상태변화를 보기위해(ui) useState 활용, 변수 2개 생성 
 
     const [count2, setCount2] = useState(0);
 
