@@ -10,25 +10,31 @@ const ImgChangeExam2 = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-    }
+    
 
     if(keywordRef.current.value === "강아지"){
-        imgRef.current.src = 
+        imgRef.current.src = dog;
     }else if(keywordRef.current.value === "고양이") {
-        imgRef.current.src = {cat};
+        imgRef.current.src = cat;
     }
+
+    
 
 
     // 입력창의 내용을 초기화 하고 해당 요소를 선택하능 기능
-    keywordRef.current.value='';
-    keywordRef.current.focus();
-
+    // keywordRef.current.value='';
+    // keywordRef.current.focus();
+    
+    }
   return (
 
     <div>
         <form>
-
+        <p>희망하는 사진이 있으신가요?</p>
+        <input type="text" ref={keywordRef}></input>
+        <button onClick={handleClick}>변경</button>
         </form>
+        <img ref={imgRef}></img>
     </div>
   )
 }
